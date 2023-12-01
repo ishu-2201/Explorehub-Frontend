@@ -27,7 +27,7 @@ const Signup = () => {
                 password
             }
     
-            axios.post("http://127.0.0.1:8000/register", {name: newUser.full_name, username: newUser.user_name, password: newUser.password})
+            axios.post("https://explorehub-backend.vercel.app/register", {name: newUser.full_name, username: newUser.user_name, password: newUser.password})
                 .then(() => {
                     alert("Registration Successful!");
                     history.push("/user/login");
