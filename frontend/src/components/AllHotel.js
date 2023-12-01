@@ -33,7 +33,7 @@ export default class AllHotel extends Component {
     this.retriveHotels();
   }
   async retriveHotels() {
-    await axios.get("http://127.0.0.1:8000/all-hotels").then((res) => {
+    await axios.get("https://explorehub-backend.vercel.app/all-hotels").then((res) => {
       if (res.data) {
         this.setState({
           hotels: res.data.hotels,

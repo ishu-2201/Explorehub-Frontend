@@ -13,7 +13,7 @@ export default class AllTourguides extends Component {
     this.retriveTourguides();
   }
   retriveTourguides() {
-    axios.get("http://127.0.0.1:8000/all-tourguides").then((res) => {
+    axios.get("https://explorehub-backend.vercel.app/all-tourguides").then((res) => {
       this.setState({
         tourguides: res.data.tourguides,
       });
@@ -45,7 +45,7 @@ export default class AllTourguides extends Component {
 
   handleTextSearch = (e) => {
     const searchTerm = e.currentTarget.value;
-    axios.get("http://127.0.0.1:8000/all-tourguides").then((res) => {
+    axios.get("https://explorehub-backend.vercel.app/all-tourguides").then((res) => {
       this.filterContent(res.data.tourguides, searchTerm);
     });
   };

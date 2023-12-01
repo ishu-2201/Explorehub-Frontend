@@ -38,7 +38,7 @@ const AddPayment = (props) => {
     };
 
     axios
-      .post("http://localhost:8070/payment/add", newCard)
+      .post("https://explorehub-backend.vercel.app/payment/add", newCard)
       .then(() => {
         console.log("Added");
         props.history.push(`/view/payment+details/${props.userId}`)

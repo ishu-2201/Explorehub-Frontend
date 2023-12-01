@@ -17,7 +17,7 @@ export default class AllPacks extends Component {
     this.retrivePackages();
   }
   retrivePackages() {
-    axios.get("http://127.0.0.1:8000/all-packages").then((res) => {
+    axios.get("https://explorehub-backend.vercel.app/all-packages").then((res) => {
       if (res.data.success) {
         this.setState({
           packages: res.data.existingPackages,

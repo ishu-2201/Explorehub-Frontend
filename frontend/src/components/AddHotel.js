@@ -45,7 +45,7 @@ export default function AddHotel() {
     };
 
     axios
-      .post("http://127.0.0.1:8000/add-hotel", {
+      .post("https://explorehub-backend.vercel.app/add-hotel", {
         hotel_name,
         hotel_type,
         hotel_location,
